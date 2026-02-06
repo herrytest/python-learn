@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery Auth + OCR</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Image Gallery API Demo</h1>
+
+      <section class="card">
+        <h2>1) Register & Login</h2>
+        <div class="grid">
+          <input id="username" placeholder="Username" />
+          <input id="email" placeholder="Email" />
+          <input id="password" type="password" placeholder="Password" />
+        </div>
+        <div class="row">
+          <button id="registerBtn">Register</button>
+          <button id="loginBtn">Login</button>
+        </div>
+        <p id="authStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>2) Drag & Drop Upload</h2>
+        <div id="dropZone">Drop images here or click to select</div>
+        <input id="fileInput" type="file" multiple accept="image/*" hidden />
+        <p class="status" id="uploadStatus"></p>
+      </section>
+
+      <section class="card">
+        <h2>3) My Gallery + OCR</h2>
+        <button id="refreshBtn">Refresh Gallery</button>
+        <div id="gallery" class="gallery"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
