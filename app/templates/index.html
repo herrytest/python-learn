@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auth OCR Gallery</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Authentication + OCR Image Gallery</h1>
+
+    <section class="panel">
+      <h2>Auth</h2>
+      <input id="username" placeholder="username" />
+      <input id="email" placeholder="email (for register)" />
+      <input id="password" type="password" placeholder="password" />
+      <div class="row">
+        <button id="registerBtn">Register</button>
+        <button id="loginBtn">Login</button>
+      </div>
+      <p id="authStatus"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Upload and Drag/Drop Gallery</h2>
+      <input id="fileInput" type="file" accept="image/*" />
+      <button id="uploadBtn">Upload</button>
+      <ul id="gallery" class="gallery"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>OCR Output (select image then click Read Text)</h2>
+      <button id="ocrBtn">Read Text</button>
+      <pre id="ocrOutput"></pre>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
